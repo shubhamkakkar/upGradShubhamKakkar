@@ -15,7 +15,7 @@ import TypoGraphyComp from "../TypoGraphyComp/TypoGraphyComp"
 export default props => (
     <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography> {props.contactInfo[0]} </Typography>
+            <Typography variant="h6" color="primary"> {props.contactInfo[0]} </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <Grid container>
@@ -37,7 +37,7 @@ export default props => (
         </ExpansionPanelDetails>
         <Divider />
         <ExpansionPanelActions>
-            <Button color="secondary" onClick={() => props.deleteFunction(props.index)}>Edit</Button>
+            <Button color="secondary" onClick={() => props.editFunction(props.index)}>Edit</Button>
             <Button variant="outlined" color="primary" onClick={() => props.deleteFunction(props.index)}>Delete</Button>
         </ExpansionPanelActions>
     </ExpansionPanel>

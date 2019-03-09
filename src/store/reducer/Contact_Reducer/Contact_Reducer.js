@@ -7,7 +7,6 @@ export default (state = [], action) => {
         case CONTACT: {
             return [
                 ...state, action.contact
-
             ]
         }
 
@@ -17,7 +16,7 @@ export default (state = [], action) => {
         }
 
         case DELETE: {
-            return state.splice(action.index, 0);
+            return state.filter((currentState, index) => index !== action.index)
         }
 
         default: {

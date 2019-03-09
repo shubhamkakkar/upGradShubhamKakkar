@@ -30,18 +30,15 @@ class PhoneBook extends Component {
                     this.props.contacts.length ? (
                         <Grid container>
                             {
-                                this.props.contacts.map((res, index) => {
-                                    console.log(res)
-                                    return (
-                                        <Grid key={index} item xs={12} style={{ padding: "1.25mm" }}>
-                                            <PhoneBookPanel
-                                                deleteFunction={this.deleteFunction}
-                                                editFunction={this.editFunction}
-                                                contactInfo={res}
-                                                index={index} />
-                                        </Grid>
-                                    )
-                                })
+                                this.props.contacts.map((res, index) => (
+                                    <Grid key={index} item xs={12} style={{ padding: "1.25mm" }}>
+                                        <PhoneBookPanel
+                                            deleteFunction={this.deleteFunction}
+                                            editFunction={this.editFunction}
+                                            contactInfo={res}
+                                            index={index} />
+                                    </Grid>
+                                ))
                             }
                         </Grid>
                     ) : <div> No contacts </div>
